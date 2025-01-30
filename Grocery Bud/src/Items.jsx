@@ -1,12 +1,11 @@
-import React from "react";
 import SingleItem from "./SingleItem";
 
-function Items({ items, removeItems }) {
+function Items({ items, removeItem }) {
   return (
     <div className="items">
       {items.map((item) => {
         return (
-          <SingleItem key={item.id} item={item} removeItems={removeItems} />
+          <SingleItem key={item.id} item={item} removeItem={removeItem} />
         );
       })}
     </div>

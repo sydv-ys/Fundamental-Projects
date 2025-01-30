@@ -11,7 +11,14 @@ function SingleItem({ item, removeItem }) {
         onChange={() => setIsChecked(!isChecked)}
       />
       <p>{item.name}</p>
-      <button className="btn remove-btn">delete</button>
+      <button
+        className="btn remove-btn"
+        onClick={() => {
+          removeItem(item.id);
+        }}
+      >
+        delete
+      </button>
     </div>
   );
 }
