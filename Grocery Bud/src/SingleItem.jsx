@@ -5,7 +5,7 @@ function SingleItem({ item, removeItem, editItem }) {
     <div className="single-item">
       <input
         type="checkbox"
-        checked={item.complete}
+        checked={item.completed}
         onChange={() => editItem(item.id)}
       />
       <p>{item.name}</p>
