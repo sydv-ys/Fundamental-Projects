@@ -253,3 +253,45 @@ ul {
   margin-top: 1rem;
 }
 /* ============= PROJECT CSS =============== */
+
+nav {
+  background: var(--white);
+  box-shadow: var(--shadow-1);
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--primary-500);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: var(--primary-700);
+  transform: rotate(90deg);
+}
+.logo {
+  height: 40px;
+}
+.links a {
+  color: var(--grey-700);
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+.links a:hover {
+  background: var(--primary-100);
+  color: var(--primary-500);
+  padding-left: 1.5rem;
+}
+
+

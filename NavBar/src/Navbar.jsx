@@ -1,32 +1,44 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { links, social } from "./data";
 import { FaBars } from "react-icons/fa";
 import logo from "./logo.svg";
 
 function Navbar() {
-  const [showLinks, setShowLinks] = useState(true);
+  const [showLinks, setShowLinks] = useState(false);
+  const linkContainerRef = useRef(null);
+  const linksRef = useRef(null);
+
+  const toggle = () => {
+    setShowLinks(!showLinks);
+  };
 
   return (
     <nav>
       <div className="nav-center">
-        <div className="header">
+        <div className="nav-header">
           <img src={logo} className="logo" />
-        </div>
 
-        <button className="nav-toggle">
-          <FaBars />
-        </button>
+          <button className="nav-toggle" onClick={toggle}>
+            <FaBars />
+          </button>
+        </div>
       </div>
-      <div className="links-container">
-        <ul className="links">
-          {links.map((link) => {
-            if (showLinks) {
-              return <h2 key={link.id}>{link.text}</h2>;
-            }
-            return;
-          })}
-        </ul>
-      </div>
+
+      {showLinks && (
+        <div className="links-container" ref={linkContainerRef}>
+          <ul className="links" ref={linksRef}>
+            {links.map((link) => {
+              if (showLinks) {
+                return (
+                  <li key={link.id}>
+                    <a href={link.url}>{link.text}</a>
+                  </li>
+                );
+              }
+            })}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }
