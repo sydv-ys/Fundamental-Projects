@@ -26,7 +26,7 @@ const App = () => {
   if (isLoading) {
     return (
       <section className="jobs-center">
-        <div className="loading">loading...</div>
+        <div className="loading"></div>
       </section>
     );
   }

@@ -1,4 +1,3 @@
-import React from "react";
 import Duties from "./Duties";
 
 function JobInfo({ jobs }) {
@@ -6,7 +5,6 @@ function JobInfo({ jobs }) {
 
   return (
     <article className="job-info">
-      here
       <h3>{title}</h3>
       <span className="job-company">{company}</span>
       <p className="job-date">{dates}</p>
