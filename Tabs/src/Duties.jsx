@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 
-function Duties({duties}) {
-    console.log(duties);
-    
-  return (
-    <div>Duties</div>
-  )
+function Duties({ duties }) {
+  console.log(duties);
+
+  return <div>{duties}</div>;
 }
 
-export default Duties
+export default Duties;

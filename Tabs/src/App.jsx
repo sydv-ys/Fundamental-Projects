@@ -24,9 +24,11 @@ const App = () => {
   }, []);
 
   if (isLoading) {
-    <section className="jobs-center">
-      <div className="loading"></div>
-    </section>;
+    return (
+      <section className="jobs-center">
+        <div className="loading">loading...</div>
+      </section>
+    );
   }
 
   return (
