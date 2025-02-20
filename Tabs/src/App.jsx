@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import JobInfo from "./JobInfo";
+import Button from "./Button";
 
 const url = "https://www.course-api.com/react-tabs-project";
 
 const App = () => {
   const [jobs, setJobs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [currentItem, setCurrentItem] = useState(0);
 
   const fetchJobs = async () => {
     try {
@@ -33,7 +35,12 @@ const App = () => {
 
   return (
     <div className="jobs-center">
-      <JobInfo jobs={jobs} />
+      <Button
+        jobs={jobs}
+        currentItem={currentItem}
+        setCurrentItem={setCurrentItem}
+      />
+      <JobInfo jobs={jobs} currentItem={currentItem} />
     </div>
   );
 };
