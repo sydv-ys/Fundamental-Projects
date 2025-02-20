@@ -8,7 +8,7 @@ function Duties({ duties }) {
       {duties.map((duty, index) => {
         const id = v4();
         return (
-          <div key={index} className="job-disc">
+          <div key={id} className="job-disc">
             <FaAngleDoubleRight className="job-icon" />
             <p>{duty}</p>
           </div>
